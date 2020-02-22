@@ -11,16 +11,32 @@ import java.util.regex.Pattern;
 public class Color {
     private static final Pattern PARAMETER_PATTERN = Pattern.compile("^([0-9\\\\.e%]+) *(?:[, ]) *([0-9\\\\.e%]+) *(?:[, ]) *([0-9\\\\.e%]+) *(?:(?:[,/]) *([0-9\\\\.e%]+))?$");
 
-    public final byte r;
-    public final byte g;
-    public final byte b;
-    public final byte a;
+    private final byte r;
+    private final byte g;
+    private final byte b;
+    private final byte a;
 
     private Color(byte r, byte g, byte b, byte a) {
         this.r = r;
         this.g = g;
         this.b = b;
         this.a = a;
+    }
+
+    public int R() {
+        return this.r & 0xff;
+    }
+
+    public int G() {
+        return this.g & 0xff;
+    }
+
+    public int B() {
+        return this.b & 0xff;
+    }
+
+    public int A() {
+        return this.a & 0xff;
     }
 
     public String toHex(boolean withHash, boolean alpha) {
@@ -34,6 +50,18 @@ public class Color {
 
     public String toHex(boolean alpha) {
         return toHex(true, alpha);
+    }
+
+    public Color withAlpha(byte alpha) {
+        return Color.fromRGB(this.r, this.g, this.b, alpha);
+    }
+
+    public int toInt() {
+        return ((this.r & 0xff) << 16) + ((this.g & 0xff) << 8) + (this.b & 0xff);
+    }
+
+    public int[] toIntArray() {
+        return new int[]{this.r & 0xff, this.g & 0xff, this.b & 0xff, this.a & 0xff};
     }
 
     public static Color fromString(String color) {
