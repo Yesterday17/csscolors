@@ -1,9 +1,9 @@
-package mmf.moe.csscolors;
+package moe.mmf.csscolors;
 
-import mmf.moe.csscolors.keywords.CSSLevel1;
-import mmf.moe.csscolors.keywords.CSSLevel2;
-import mmf.moe.csscolors.keywords.CSSLevel3;
-import mmf.moe.csscolors.keywords.CSSLevel4;
+import moe.mmf.csscolors.keywords.CSSLevel1;
+import moe.mmf.csscolors.keywords.CSSLevel2;
+import moe.mmf.csscolors.keywords.CSSLevel3;
+import moe.mmf.csscolors.keywords.CSSLevel4;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

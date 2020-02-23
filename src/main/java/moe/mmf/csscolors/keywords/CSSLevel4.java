@@ -1,4 +1,4 @@
-package mmf.moe.csscolors.keywords;
+package moe.mmf.csscolors.keywords;
 
 import java.util.HashMap;
 import java.util.Map;

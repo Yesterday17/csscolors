@@ -1,4 +1,4 @@
-import mmf.moe.csscolors.Color;
+import moe.mmf.csscolors.Color;
 import org.junit.Test;
 
 public class TestColor {
