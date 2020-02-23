@@ -20,7 +20,7 @@ public abstract class CSSLevel1 {
         put("navy", navy);
         put("blue", blue);
         put("teal", teal);
-        put("aqu", aqua);
+        put("aqua", aqua);
     }};
 
     public static final String black = "#000000";
